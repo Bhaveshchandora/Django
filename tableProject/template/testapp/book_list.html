@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Books Information</h1>
+    {%for book in book_list%}<!--here book_list is a context object which is created bydefault by django-->
+    <!--Also here in context object 'book=our created table or class name' -->
+    <ul>
+      <li>Book Name :{{book.title}}</li>
+      <li>Book Author :{{book.author}}</li>
+      <li>Book Pages :{{book.pages}}</li>
+      <li>Book Price :{{book.price}}</li>
+    </ul><hr><br>
+    {%endfor%}
+  </body>
+</html>
